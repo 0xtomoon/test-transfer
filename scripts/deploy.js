@@ -10,6 +10,7 @@ async function main() {
 	const proxy = await upgrades.deployProxy(TestFactory);
   await proxy.deployed();
 	console.log(`TestProxy deployed to: `, proxy.address);
+  // await upgrades.upgradeProxy("0x9f7dced7631DeB3f4A858F3343D8Af4612F67f84", TestFactory);
 }
 
 main()

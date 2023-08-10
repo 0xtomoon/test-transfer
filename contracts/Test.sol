@@ -30,4 +30,7 @@ contract Test is OwnableUpgradeable, ReentrancyGuardUpgradeable {
     function transferEth(address payable recipient) public onlyOwner {
         AddressUpgradeable.sendValue(recipient, address(this).balance);
     }
+
+    // Get ETH in the contract
+    receive() external payable {}
 }
